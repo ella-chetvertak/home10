@@ -16,7 +16,7 @@ coffeeMachine.start();
     // Second
 
 function concatStr(...args) {
-    return args.join();
+    return args.reduce((acc, currentValue) => (acc += currentValue), '');  
 }
 let checkConcat = concatStr('Hello', ' ', 'Matt');
 console.log(checkConcat);
